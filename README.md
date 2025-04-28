@@ -1,3 +1,150 @@
+📊 Personal Finance Visualizer
+
+A clean and minimal web app to visualize your personal finance, built with modern technologies 🚀
+(Stage 1 Completion: Add Transaction, View Transaction, Delete Transaction, Monthly Chart)
+
+✨ Features (Stage 1)
+✅ Add a New Transaction (Amount, Description, Date)
+
+✅ View All Transactions in a List
+
+✅ Delete a Transaction
+
+✅ Monthly Expenses Bar Chart (Recharts)
+
+✅ Form Validation (React Hook Form + Zod)
+
+🛠 Tech Stack
+
+Frontend	Backend	Validation	Charts	UI
+Next.js (App Router)	MongoDB (Mongoose)	Zod + React Hook Form	Recharts	Shadcn/UI
+🧩 Project Structure
+swift
+Copy
+Edit
+/app/api/transactions/   → API routes for CRUD
+/components/             → Form, Card, Transaction List, Chart
+/models/transaction.js   → Mongoose schema
+/lib/mongodb.js          → MongoDB connection utility
+📂 Getting Started
+1. Clone the Repo
+bash
+Copy
+Edit
+git clone <your-repo-link>
+cd personal-finance-visualizer
+2. Install All Dependencies
+bash
+Copy
+Edit
+npm install
+3. Setup .env.local
+Create a .env.local file in the root:
+
+bash
+Copy
+Edit
+MONGODB_URI=your_mongodb_connection_string
+(Replace your_mongodb_connection_string with your real MongoDB URI)
+
+4. Run the Development Server
+bash
+Copy
+Edit
+npm run dev
+Visit: http://localhost:3000
+
+📈 Stage 1 Complete Details
+MongoDB connection setup with Mongoose
+
+Transaction API (Add, Get, Delete)
+
+Form validation with Zod + React Hook Form
+
+Monthly Expenses Chart using Recharts
+
+Shadcn UI cards, inputs, and components
+
+🌐 Live Demo
+Link will be added after deployment 🚀
+
+🔥 Coming in Stage 2
+Add Category to transactions (Food, Rent, etc.)
+
+Display Pie Chart for category-wise expenses
+
+Create a Dashboard with Summary Cards (Total Income, Total Expense, etc.)
+
+💬 Author
+Built with ❤️ by Daveed Gangi
+Assignment for Yardstick AI
+
+📌 Extra Notes
+❗ Make sure MongoDB service is running while testing locally.
+
+❗ No authentication is added (as per stage 1 assignment instructions).
+
+❗ Form validations are strong to prevent empty or wrong submissions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
