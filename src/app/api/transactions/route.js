@@ -6,8 +6,8 @@ export async function POST(request){
 
     try{
         await connectDB();
-        const {amount,description} = await request.json();
-        const newTransaction=new Transaction({amount,description});
+        const {amount,description,category,type} = await request.json();
+        const newTransaction=new Transaction({amount,description,category,type});
         await newTransaction.save();
 
         return NextResponse.json({success:true,newTransaction});

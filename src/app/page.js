@@ -17,6 +17,11 @@ export default function Home() {
         View Monthly Expenses chartData
       
     </Link>
+    <br/>
+    <Link href="/categories" className="mt-4 text-teal-600 hover:text-teal-800 transition-colors">
+        View category Expenses chartData
+      
+    </Link>
   </div>
   );
 }

@@ -92,6 +92,119 @@ Assignment for Yardstick AI
 
 
 
+Stage 2 - Expense Tracker Dashboard
+Overview
+This project is part of an ongoing Expense Tracker application that provides a dashboard with the following features:
+
+Total Expenses: Displays the total expenses for the current month.
+
+Category Breakdown: Displays a pie chart showing the breakdown of expenses by category.
+
+Most Recent Transactions: Displays a list of the most recent transactions.
+
+The dashboard uses React for the frontend and leverages Recharts for visualizations (pie chart). The data is fetched from an API and displayed in a user-friendly interface.
+
+Features
+1. Total Expenses
+Displays the total amount of expenses for the current month.
+
+Uses reduce() to aggregate expenses from the fetched data.
+
+2. Category Breakdown
+Uses a pie chart to display the percentage breakdown of expenses by category (e.g., Food, Rent, Transport).
+
+Leverages Recharts for the pie chart implementation.
+
+3. Most Recent Transactions
+Displays the top 3 most recent transactions in a list format.
+
+Shows the category and amount of each transaction.
+
+Setup and Installation
+To get started with this project locally, follow the steps below.
+
+Prerequisites
+Node.js (v14 or higher) installed on your machine.
+
+A code editor (e.g., Visual Studio Code).
+
+1. Clone the repository
+bash
+Copy
+Edit
+git clone <repository-url>
+cd <project-folder>
+2. Install dependencies
+Run the following command to install the required dependencies:
+
+bash
+Copy
+Edit
+npm install
+3. Start the development server
+bash
+Copy
+Edit
+npm start
+This will start the development server and open the application in your browser at http://localhost:3000.
+
+Project Structure
+src/: Contains all the source files for the project.
+
+components/: Contains React components used in the application.
+
+Dashboard.js: Main dashboard component displaying summary data.
+
+App.js: Main entry point for the application, rendering the Dashboard.
+
+index.js: Entry point for rendering the React application to the DOM.
+
+Technologies Used
+React: JavaScript library for building user interfaces.
+
+Recharts: Charting library used to create interactive pie charts.
+
+ClipLoader: Spinner component to show loading state.
+
+CSS: Styling used for the layout and cards.
+
+Data Flow
+Fetching Data:
+
+The application fetches transaction data, including expenses and categories, using a useEffect hook. The data is stored in the component's state using useState.
+
+The data is aggregated and displayed in the form of summary cards and a pie chart.
+
+Displaying Data:
+
+The Total Expenses card shows the total amount spent for the current month.
+
+The Category Breakdown is represented as a pie chart that displays the percentage of total expenses by category.
+
+The Most Recent Transactions displays the latest transactions, showing the category and amount.
+
+Example Output
+Total Expenses
+A card showing the total expenses for the current month.
+
+Category Breakdown
+A responsive pie chart visualizing the breakdown of expenses across categories (e.g., Food, Rent, Transport).
+
+Most Recent Transactions
+A list of the three most recent transactions, showing the category and amount.
+
+Future Improvements
+Date Filtering: Allow users to filter transactions by date or time range.
+
+Transaction Details: Provide detailed views of each transaction when clicked.
+
+Data Persistence: Store transaction data in a database or local storage.
+
+User Authentication: Implement user login functionality to track personal expenses.
+
+
+
+
 
 
 

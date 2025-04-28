@@ -2,6 +2,9 @@
 
 import {useState} from "react";
 
+// Importing ShadCN UI components
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+
 
 import ClipLoader from "react-spinners/ClipLoader";
 
@@ -11,6 +14,9 @@ export default function AddTransaction(){
     const[amount,setAmount]=useState("");
     const[description,setDescription]=useState("");
     const[loading,setLoading]=useState(false);
+    const[category,setCategory]=useState("");
+    const[type,setType]=useState("");
+
     
     
 
@@ -20,7 +26,9 @@ export default function AddTransaction(){
 
         let userAmountData={
             amount:Number(amount),
-            description
+            description,
+            category,
+            type
         }
         const options={
             method:"POST",
@@ -36,6 +44,8 @@ export default function AddTransaction(){
         if(data.success){
             setAmount("");
             setDescription("");
+            setCategory("");
+            setType("");
         }
         console.log(data);
       }
@@ -86,6 +96,38 @@ export default function AddTransaction(){
               className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600"
             />
           </div>
+
+          <div>
+            <label>Category</label>
+            <Select required value={category} onValueChange={(value) => setCategory(value)}>
+              <SelectTrigger className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600">
+                <SelectValue placeholder="Select Category" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="Food">Food</SelectItem>
+                <SelectItem value="Rent">Rent</SelectItem>
+                <SelectItem value="Salary">Salary</SelectItem>
+                <SelectItem value="Shopping">Shopping</SelectItem>
+                <SelectItem value="Investment">Investment</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div>
+            <label>Type</label>
+            <Select required value={type} onValueChange={(value) => setType(value)}>
+              <SelectTrigger className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-teal-600">
+                <SelectValue placeholder="Select Type" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="income">Income</SelectItem>
+                <SelectItem value="expense">Expense</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+
+
           <div>
             <button
               className="w-full py-3 bg-teal-600 text-white rounded-md hover:bg-teal-700 transition-colors"
